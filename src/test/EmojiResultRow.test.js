@@ -1,5 +1,5 @@
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
-import EmojiResultsRow from "../EmojiResultRow"; // Adjust the import path
+import EmojiResultsRow from "../EmojiResultRow";
 
 describe("Copy to clipboard", () => {
   test("should copy emoji to clipboard when button clicked", async () => {
@@ -16,7 +16,6 @@ describe("Copy to clipboard", () => {
       .closest(".component-emoji-result-row.copy-to-clipboard")
       .querySelector(".info");
 
-    // click on the copy emoji button
     fireEvent.click(copyButton);
 
     await waitFor(() => {
